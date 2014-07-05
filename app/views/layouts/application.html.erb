@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Paperclip Demo by CQ</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <h1><%= link_to 'Paperclip Demo by CQ', root_path %></h1>
+        </div>
+    </header>
+
+<%= yield %>
+
+</body>
+</html>

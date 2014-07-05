@@ -1,0 +1,8 @@
+<!-- <h1>Welcome to Paperclip!</h1>  -->
+<h2>Listing users</h2>
+
+<h2>Adding a new user <%= link_to 'New User', new_user_path, class: 'new-user' %> </h2>
+
+<div id="users">
+    <%= render @users %> <!-- 调用 _user.html.erb -->
+</div>

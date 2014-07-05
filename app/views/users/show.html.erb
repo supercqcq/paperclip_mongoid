@@ -1,0 +1,10 @@
+<p id="notice"> <%= notice %> </p>
+<h2>Hi, <%= @user.name %></h2> <!--  undefined method `name' for nil:NilClass, 需要在 UsersController 中的 show 方法增加 @user = User.find(params[:id]), 来查找 user  -->
+    <%= image_tag @user.avatar.url(:medium) %>
+
+<!--为在列表 user 中的 show 添加一些操作 -->
+<div class="show actions">
+    <%= link_to 'Edit', edit_user_path(@user) %>
+    <%= link_to 'Remove', @user, data: {confirm: 'Are you sure'}, method: :delete, class: 'destroy' %>
+    <%= link_to 'Back', users_path %>
+</div>
